@@ -24,13 +24,28 @@
             font-size: 12px;
             border-bottom: 1px solid gray;
             cursor: pointer;
+            max-width: max-content;
             &:hover{
-                color: #6439ff;
-                border-bottom: #6439ff 1px solid;
+                color: rgb(216, 215, 215);
+                border-bottom: rgb(228, 228, 228) 1px solid;
             }
         }
+        .percentage{
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        .positive{
+            color: green;
+        }
+        .negative{
+            color: red;
+        }
         .icon{
-            margin-top: -20px;
+            font-size: 18px;
+            padding: 5px;
+            align-self: flex-end;
+            border-radius: 5px;
         }
     }
 }
