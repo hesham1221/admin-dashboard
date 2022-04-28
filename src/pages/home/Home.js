@@ -1,4 +1,6 @@
 import React from "react";
+import Chart from "../../components/Chart";
+import FeaturedChart from "../../components/FeaturedChart";
 import NavBar from "../../components/NavBar";
 import Sidebar from "../../components/Sidebar";
 import Widget from "../../components/Widget";
@@ -41,6 +43,10 @@ const Home = () => {
         <NavBar />
         <div className="widgets">
           {widgedFetched.map(widged => <Widget {...widged} />)}
+        </div>
+        <div className="charts">
+          <FeaturedChart />
+          <Chart />
         </div>
       </div>
     </div>
