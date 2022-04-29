@@ -1,0 +1,21 @@
+.table{
+    color : gray;
+    .tableCell{
+        color: gray;
+        font-size: 13px;
+        .tableImage{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .Pending{
+        color: goldenrod;
+       border-bottom: 1px solid goldenrod;
+       width: max-content;
+    }
+    .Approved{
+        color: green;
+        border-bottom: 1px solid green;
+        width: max-content;
+    }
+}

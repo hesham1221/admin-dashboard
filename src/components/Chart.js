@@ -2,7 +2,6 @@ import React from "react";
 import "./chart.scss";
 import {
   XAxis,
-  YAxis,
   CartesianGrid,
   Tooltip,
   AreaChart,
