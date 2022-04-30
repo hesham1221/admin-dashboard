@@ -1,7 +1,9 @@
 import React from "react";
 import "./sidebar.scss";
 import {AccountCircle, Assessment, CreditCard, Dashboard,ExitToApp,LocalShipping,Notifications,Person,Psychology,SettingsApplications,SettingsSystemDaydream,ShoppingBag} from '@mui/icons-material';
+import {useNavigate} from 'react-router-dom'
 const Sidebar = () => {
+  const navigate = useNavigate()
   return (
     <div className="sidebar">
       <div className="top">
@@ -10,12 +12,12 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">Main</p>
-          <li>
+          <li onClick={() => navigate('/',{replace : true})}>
               <Dashboard className="icons" />
             <span>Dashboard</span>
           </li>
           <p className="title">Lists</p>
-          <li>
+          <li onClick={() => navigate('/users',{replace : true})}>
               <Person className="icons"/>
             <span>Users</span>
           </li>

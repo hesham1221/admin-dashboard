@@ -1,5 +1,48 @@
 .list{
+    display: flex;
+    .listContainer{
+        flex: 6;
+        .dataGrid{
+            width: 100%;
+            height: calc(97vh - 30px);
+            .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+                font-size: 12px;
+            }
+            .gridEL{
+                .pending{
+                    color: goldenrod;
+                    text-decoration: underline;
+                    font-size: 13px;
+                }
+                .active{
+                    color: green;
+                    text-decoration: underline;
+                    font-size: 13px;
+                }
+                .notactive{
+                    color: red;
+                    text-decoration: underline;
+                    font-size: 13px;
+                }
+                .Mui-selected{
+                    background-color: #ece8ff;
+                }
+                .MuiCheckbox-root {
+                    color:#7451f8
+                }
+                border: none;
+                font-size: 13px;
+                .MuiDataGrid-columnHeaders{
+                    .MuiDataGrid-columnHeadersInner{
+                        font-weight: bold;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
     .title{
         color: white;
     }
+        
 }
