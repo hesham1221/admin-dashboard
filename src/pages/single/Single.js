@@ -6,7 +6,6 @@ import Sidebar from "../../components/Sidebar";
 import NavBar from "../../components/NavBar";
 import Chart from "../../components/Chart";
 import { userChart } from "../../data/chartData";
-import { Table } from "@mui/material";
 import { tableData } from "../../data/table";
 import TableList from "../../components/TableList";
 const Single = () => {

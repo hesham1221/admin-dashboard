@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./sidebar.scss";
-import {AccountCircle, Assessment, CreditCard, Dashboard,ExitToApp,LocalShipping,Notifications,Person,Psychology,SettingsApplications,SettingsSystemDaydream,ShoppingBag} from '@mui/icons-material';
+import {AccountCircle, Assessment, CreditCard, Dashboard,ExitToApp,Favorite,LocalShipping,Notifications,Person,Psychology,SettingsApplications,SettingsSystemDaydream,ShoppingBag} from '@mui/icons-material';
 import {useNavigate} from 'react-router-dom'
 import { DarkModeContext } from "../App";
 const Sidebar = () => {
-  const { setDarkmode, darkMode } = useContext(DarkModeContext);
+  const { setDarkmode} = useContext(DarkModeContext);
   const navigate = useNavigate()
   return (
     <div className="sidebar">
@@ -78,6 +78,9 @@ const Sidebar = () => {
               setDarkmode((dark) => !dark);
               localStorage.setItem("Hpanel_darkMode", false);
             }}></div>
+      </div>
+      <div style={{ marginTop : 'auto',color : 'grey' , fontSize : 14 , padding : '5px' , fontWeight : 'bold' }}>
+        Made with <Favorite style={{color : 'red' ,fontSize : 14}} /> by Hesham
       </div>
     </div>
   );
