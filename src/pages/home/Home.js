@@ -6,6 +6,8 @@ import Sidebar from "../../components/Sidebar";
 import TableList from "../../components/TableList";
 import Widget from "../../components/Widget";
 import "./home.scss";
+import {data} from '../../data/chartData'
+import { tableData } from "../../data/table";
 const Home = () => {
   const widgedFetched = [
     {
@@ -47,11 +49,11 @@ const Home = () => {
         </div>
         <div className="charts">
           <FeaturedChart />
-          <Chart />
+          <Chart data={data} width={730} height={250} />
         </div>
         <div className="tableContainer">
           <div className="tableList">
-            <TableList />
+            <TableList rows = {tableData} />
           </div>
         </div>
       </div>

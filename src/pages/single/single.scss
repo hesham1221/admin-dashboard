@@ -1,6 +1,40 @@
-.single{
-    background-color: purple;
-    .title{
-        color: white;
+.single {
+  color: gray;
+  font-size: 13px;
+  display: flex;
+  .info {
+    flex: 6;
+    .infoSpleter{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        height: 250px;
+        .infoContainer {
+          display: flex;
+          flex: 1.5;
+          
+          align-items: center;
+          -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+          box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+          justify-content: space-evenly;
+          .userInfo {
+            .InfoHeader {
+              font-weight: bold;
+              font-size: 15px;
+              color: rgb(78, 78, 78);
+            }
+            .InfoData {
+              font-size: 13px;
+              margin-bottom: 13px;
+            }
+          }
+          .profilePic {
+            width: 120px;
+            height: 120px;
+            border-radius: 700px;
+            margin-top: -100px;
+          }
+        }
     }
+  }
 }

@@ -9,22 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const Chart = () => {
-  const data = [
-    {name : 'january' , total : 400},
-    {name : 'febuary' , total : 300},
-    {name : 'march' , total : 500},
-    {name : 'april' , total : 100},
-    {name : 'may' , total : 150},
-    {name : 'june' , total : 700},
-    {name : 'july' , total : 500},
-    {name : 'august' , total : 200},
-    {name : 'september' , total : 230},
-    {name : 'october' , total : 120},
-    {name : 'november' , total : 505},
-    {name : 'december' , total : 201},
-
-  ];
+const Chart = ({data , width , height}) => {
   return (
     <div className="chart">
       <div className="title">
@@ -32,8 +17,8 @@ const Chart = () => {
       </div>
       <ResponsiveContainer width='100%' height='100%'>
       <AreaChart
-        width={730}
-        height={250}
+        width={width}
+        height={height}
         data={data}
         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
       >
