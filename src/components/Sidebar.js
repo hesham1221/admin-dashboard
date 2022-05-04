@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./sidebar.scss";
 import {AccountCircle, Assessment, CreditCard, Dashboard,ExitToApp,LocalShipping,Notifications,Person,Psychology,SettingsApplications,SettingsSystemDaydream,ShoppingBag} from '@mui/icons-material';
 import {useNavigate} from 'react-router-dom'
+import { DarkModeContext } from "../App";
 const Sidebar = () => {
+  const { setDarkmode, darkMode } = useContext(DarkModeContext);
   const navigate = useNavigate()
   return (
     <div className="sidebar">
@@ -68,8 +70,14 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-          <div></div>
-          <div></div>
+          <div onClick={() => {
+              setDarkmode((dark) => !dark);
+              localStorage.setItem("Hpanel_darkMode", true);
+            }}></div>
+          <div onClick={() => {
+              setDarkmode((dark) => !dark);
+              localStorage.setItem("Hpanel_darkMode", false);
+            }}></div>
       </div>
     </div>
   );

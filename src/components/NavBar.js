@@ -8,10 +8,12 @@ import {
   SearchOutlined,
 } from "@mui/icons-material";
 import avatar from "../assets/imgs/gamer.png";
-import React from "react";
+import React, { useContext } from "react";
 import "./navbar.scss";
 import { Badge } from "@mui/material";
+import { DarkModeContext } from "../App";
 const NavBar = () => {
+  const { setDarkmode, darkMode } = useContext(DarkModeContext);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -24,20 +26,26 @@ const NavBar = () => {
             <LanguageOutlined />
             English
           </div>
-          <div className="item">
+          <div
+            onClick={() => {
+              setDarkmode((dark) => !dark);
+              localStorage.setItem("Hpanel_darkMode", !darkMode);
+            }}
+            className="item"
+          >
             <DarkModeOutlined />
           </div>
           <div className="item">
             <FullscreenExitOutlined />
           </div>
           <div className="item">
-            <Badge badgeContent={4} >
-            <NotificationsNoneOutlined />
+            <Badge badgeContent={4}>
+              <NotificationsNoneOutlined />
             </Badge>
           </div>
           <div className="item">
             <Badge badgeContent={5}>
-            <ChatBubbleOutlined />
+              <ChatBubbleOutlined />
             </Badge>
           </div>
           <div className="item">

@@ -4,9 +4,20 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import New from "./pages/new/New";
 import Single from "./pages/single/Single";
+import './darkMode.scss'
+import { createContext, useEffect, useState } from "react";
 
+export const DarkModeContext = createContext()
 function App() {
+  const [darkMode , setDarkmode] = useState(false)
+  useEffect(() => {
+    if (localStorage.getItem('Hpanel_darkMode') === 'true'){
+      setDarkmode(true)
+    }
+  },[]) 
   return (
+    <DarkModeContext.Provider value={{setDarkmode , darkMode}}>
+    <div className = {`app ${darkMode && 'darkMode'}`}>
     <BrowserRouter>
       <Routes>
         <Route path="/">
@@ -25,6 +36,8 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </div>
+    </DarkModeContext.Provider>
   );
 }
 

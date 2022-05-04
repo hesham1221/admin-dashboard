@@ -6,6 +6,9 @@ import Sidebar from "../../components/Sidebar";
 import NavBar from "../../components/NavBar";
 import Chart from "../../components/Chart";
 import { userChart } from "../../data/chartData";
+import { Table } from "@mui/material";
+import { tableData } from "../../data/table";
+import TableList from "../../components/TableList";
 const Single = () => {
   const { userId } = useParams(); //:userId
   const intUserId = parseInt(userId.split(":")[1]); //output parseInt('userId')
@@ -32,6 +35,11 @@ const Single = () => {
             </div>
           </div>
             <Chart data={userChart} width={500} height={150} />
+        </div>
+        <div className="tableContainer">
+          <div className="tableList">
+            <TableList rows = {tableData} />
+          </div>
         </div>
       </div>
     </div>

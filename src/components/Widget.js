@@ -9,7 +9,9 @@ import {
 } from "@mui/icons-material";
 import React from "react";
 import "./widget.scss";
+import { useNavigate } from "react-router-dom";
 const Widget = ({ type, isMoney, num, status, lastTotal }) => {
+  const navigate = useNavigate()
   const Icon = () => {
     switch (type) {
       case "Users":
@@ -29,7 +31,7 @@ const Widget = ({ type, isMoney, num, status, lastTotal }) => {
       <div className="left">
         <span className="title">{type}</span>
         <span className="counter">{`${num}${isMoney ? "$" : ""}`}</span>
-        <span className="link">See all {type}</span>
+        <span className="link" onClick={() => type==='Users' && navigate('../users' ,{replace : true})}>See all {type}</span>
       </div>
       <div className="right">
         <div className={`percentage ${status}`}>
